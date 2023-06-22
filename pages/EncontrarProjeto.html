@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<!-- saved from url=(0014)about:internet -->
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<link rel="icon" type="image/png" href="../images/ícone_fundo preto.png"/>
+    <title>Repositório Smarthis</title>
+    <link rel="stylesheet" href="../css/searchProject.css">
+</head>
+<body>
+    <div class="container">
+        <div id="project-selection">
+			<h2 id="titleProjectSelection">Project Selection</h2>
+			<div class="section" id="idProjeto">
+				<div class="searchProject">
+					<label for="projectId">Project ID:</label>
+					<input type="text" id="projectId">
+					<button id="verifyProjectId">Access project</button>
+					<div class="loadingio-spinner-2" style="display: none;">
+						<div class="ldio-xfs3spiavjg">
+						<div><div></div></div><div><div></div></div><div><div></div></div><div><div></div></div><div><div></div></div><div><div></div></div><div><div></div></div><div><div></div></div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="section" id="pesquisarProjeto">
+				<div class="searchProject">
+					<label for="projectSearch">Search Project:</label>
+					<input type="text" id="projectSearch">
+					<button id="search">Search</button>
+					<div class="loadingio-spinner-3" style="display: none;">
+						<div class="ldio-xfs3spiavjg">
+						<div><div></div></div><div><div></div></div><div><div></div></div><div><div></div></div><div><div></div></div><div><div></div></div><div><div></div></div><div><div></div></div>
+						</div>
+					</div>
+				</div>
+				<h3 id="results" style="display: none;">Results</h3>
+				<div>
+					<ul id="projectResults" style="display: none;"></ul>
+				</div>
+			</div>
+			<div class="radio-buttons">
+				<input type="radio" id="radioIdProjeto" name="projectOptions" checked>
+				<label for="radioIdProjeto">Project ID</label>
+				<input type="radio" id="radioPesquisarProjeto" name="projectOptions">
+				<label for="radioPesquisarProjeto">Search Project</label>
+			</div>
+			<div class="logout">
+				<button id="logoutButton">Logout</button>
+			</div>
+		</div>
+		
+    </div>
+	<script src="../js/jquery-3.6.4.js"></script>
+    <script src="../js/searchProject.js"></script>
+</body>
+</html>

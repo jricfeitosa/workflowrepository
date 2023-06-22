@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 19.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="64px" height="16px" viewBox="0 0 64 16" enable-background="new 0 0 64 16" xml:space="preserve">
+<g id="arrow" transform="translate(0, 0)">
+	<path style=" stroke:none;fill-rule:nonzero;fill:rgba(255,255,255,0.8);fill-opacity:1;" d="M 0.800781 0 L 6.996094 5.4375 L 0.671875 11 L 0.00390625 10.296875 L 5.53125 5.4375 L 0.128906 0.703125 Z M 0.800781 0 "/>
+</g>
+<g id="closed-folder" transform="translate(16, 0)">
+	<path fill="rgba(255, 255, 255, 0.5)" d="M15,3H8.3999996L5.6999998,0.3C5.5,0.1,5.3000002,0,5,0H1C0.4,0,0,0.4,0,1v14c0,0.6000004,0.4,1,1,1h14
+		c0.6000004,0,1-0.3999996,1-1V4C16,3.4000001,15.6000004,3,15,3z"/>
+</g>
+<g id="open-folder" transform="translate(32, 0)">
+	<path fill="rgba(255, 255, 255, 0.5)" d="M15.8000002,7.4000001C15.6000004,7.1999998,15.3000002,7,15,7H4
+		C3.5999999,7,3.2,7.1999998,3.0999999,7.5999999l-3,7.0000005C-0.1,15.1999998,0.1,16,1,16h11
+		c0.3999996,0,0.8000002-0.1999998,0.8999996-0.6000004l3-7C16.1000004,8.1000004,16,7.6999998,15.8000002,7.4000001z"/>
+	<path fill="rgba(255, 255, 255, 0.5)" d="M1.2,6.8000002C1.7,5.6999998,2.8,5,4,5h9V3c0-0.5999999-0.3999996-1-1-1H6.4000001L4.6999998,0.3
+		C4.5,0.1,4.3000002,0,4,0H1C0.4,0,0,0.4,0,1v8.6999998L1.2,6.8000002z"/>
+</g>
+<g id="file" transform="translate(48, 0)">
+    <path fill="rgba(255, 255, 255, 0.5)" d="M1,0 L1,15 L15,15 L15,4 L11,0 Z M11,4 L11,0 L4,0 Z"/>
+    <path fill="rgba(255, 255, 255, 0.5))" d="M3,5 L13,5"/>
+    <path fill="rgba(255, 255, 255, 0.5))" d="M3,7 L13,7"/>
+    <path fill="rgba(255, 255, 255, 0.5)" d="M3,9 L13,9"/>
+    <path fill="rgba(255, 255, 255, 0.5)" d="M3,11 L13,11"/>
+</g>
+</svg>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<!-- saved from url=(0014)about:internet -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<link rel="icon" type="image/png" href="../images/ícone_fundo preto.png"/>
+	<link rel="stylesheet" href="../css/style.css">
+	<link rel="stylesheet" href="../css/balloon.css">
+    <title>File Search</title>
+</head>
+<body>
+	<div class="pageComplete">
+		<div class="menuSidebar">
+			<div class="left-container">
+				<nav>
+					<ul class="mcd-menu">
+						<li class="main-li-menu"><a href="EncontrarProjeto.html"><strong>Project Selection</strong></a></li>
+						<li class="main-li-menu"><a href="EnviarWorkflow.html"><strong>Upload version</strong></a></li>
+						<li class="main-li-menu li-menu"><a href="PesquisarWorkflow.html"><strong>Download version</strong></a></li>
+						<li class="main-li-menu"><a href="../index.html"><strong>Logout</strong></a></li>
+					</ul>
+				</nav>
+			</div>
+		</div>
+		<div class="menu-container">
+			<div class="main-title">
+				<div class="one">
+					<h1>File Search</h1>
+				</div>
+			</div>
+			<div class="left-side">
+				<div class="three">
+					<h1 style="margin-bottom: 10px;">Menu</h1>
+				</div>
+				<div id="menuContainer" class="0">
+					<div class="loading">
+						<div class="imagem-degrade" style="display: none;"></div>
+						<div class="loadingTitle" style="display: none;">
+							<span class="carregando-texto">Loading</span><span class="pontos"><span class="ponto">.</span><span class="ponto">.</span><span class="ponto">.</span></span>
+						</div>
+					</div>
+				</div>
+				<div class="reset-button-container">
+					<button class="reset-button" id="resetButton">Reset</button>
+				</div>
+			</div>
+			<div class="right-side">
+				<div class="three">
+					<h1>Advanced Search</h1>
+				</div>
+				<form id="searchForm">
+				  <div data-balloon-length="large" aria-label="You can search for a term or a part of the path where the desired file is located. To search a part of the path, simply place the forward slash between each section. For example: area/subarea/file.xaml(complete path) or area/subarea(part of a path)." data-balloon-pos="up" id="div-searchInput"><input type="text" id="searchInput" placeholder="Type your search..."></div>
+				  <button id="search" class="search-button" type="submit">Search</button>
+				</form>
+				<div id="searchResults">
+					<div class="loading">
+						<div class="imagem-degrade" style="display: none;"></div>
+						<div class="loadingTitle" style="display: none;">
+							<span class="carregando-texto">Loading</span><span class="pontos"><span class="ponto">.</span><span class="ponto">.</span><span class="ponto">.</span></span>
+						</div>
+					</div>
+					<div id="noResult" style="display: none;"><p style="text-align: center;">Nenhum resultado encontrado</p></div>
+				</div>
+			</div>
+			<div id="file-infos">
+				<div id="contents"></div>
+			</div>
+		</div>
+	</div>
+	
+
+
+<!-- svg icons -->
+	<div id="svg-icons" style="display: none;">
+		<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+			width="64px" height="16px" viewBox="0 0 64 16" enable-background="new 0 0 64 16" xml:space="preserve">
+		<g id="arrow" transform="translate(0, 0)">
+			<path style=" stroke:none;fill-rule:evenodd;fill:rgb(129 253 255 / 80%);fill-opacity:1;" d="M 1.226562 11.855469 L 0.148438 10.847656 C -0.0507812 10.664062 -0.0507812 10.363281 0.148438 10.179688 L 4.621094 6 L 0.148438 1.820312 C -0.0507812 1.636719 -0.046875 1.332031 0.148438 1.152344 L 1.226562 0.140625 C 1.421875 -0.0429688 1.746094 -0.0429688 1.941406 0.140625 L 6.765625 4.648438 L 6.773438 4.65625 L 7.851562 5.664062 C 8.046875 5.847656 8.050781 6.148438 7.851562 6.335938 L 6.773438 7.34375 L 6.765625 7.351562 L 1.941406 11.855469 C 1.746094 12.042969 1.425781 12.042969 1.226562 11.855469 Z M 1.226562 11.855469 "/>
+		</g>
+		<g id="closed-folder" transform="translate(16, 0)">
+			<path fill="rgba(255, 255, 255, 0.8)" d="M15,3H8.3999996L5.6999998,0.3C5.5,0.1,5.3000002,0,5,0H1C0.4,0,0,0.4,0,1v14c0,0.6000004,0.4,1,1,1h14
+				c0.6000004,0,1-0.3999996,1-1V4C16,3.4000001,15.6000004,3,15,3z"/>
+		</g>
+		<g id="open-folder" transform="translate(32, 0)">
+			<path fill="rgba(255, 255, 255, 0.8)" d="M15.8000002,7.4000001C15.6000004,7.1999998,15.3000002,7,15,7H4
+				C3.5999999,7,3.2,7.1999998,3.0999999,7.5999999l-3,7.0000005C-0.1,15.1999998,0.1,16,1,16h11
+				c0.3999996,0,0.8000002-0.1999998,0.8999996-0.6000004l3-7C16.1000004,8.1000004,16,7.6999998,15.8000002,7.4000001z"/>
+			<path fill="rgba(255, 255, 255, 0.8)" d="M1.2,6.8000002C1.7,5.6999998,2.8,5,4,5h9V3c0-0.5999999-0.3999996-1-1-1H6.4000001L4.6999998,0.3
+				C4.5,0.1,4.3000002,0,4,0H1C0.4,0,0,0.4,0,1v8.6999998L1.2,6.8000002z"/>
+		</g>
+		<g id="file" transform="translate(48, 0)">
+			<path style=" stroke:none;fill-rule:nonzero;fill:rgb(255,255,255,1);fill-opacity:1;" d="M 12 3.390625 C 12 3.238281 11.894531 3.105469 11.746094 3.0625 L 8.648438 0.144531 C 8.582031 0.0664062 8.480469 0.0195312 8.375 0.0195312 L 2.972656 0.0195312 C 2.625 0.0195312 2.34375 0.292969 2.34375 0.628906 L 2.34375 2.335938 L 0.628906 2.335938 C 0.28125 2.335938 0 2.609375 0 2.945312 L 0 13.371094 C 0 13.707031 0.28125 13.980469 0.628906 13.980469 L 9.03125 13.980469 C 9.378906 13.980469 9.65625 13.707031 9.65625 13.371094 L 9.65625 11.667969 L 11.371094 11.667969 C 11.71875 11.667969 11.996094 11.394531 11.996094 11.058594 C 11.996094 8.503906 11.996094 5.949219 11.996094 3.394531 Z M 3.042969 2.335938 L 3.042969 0.699219 L 8.023438 0.699219 L 8.023438 3.453125 C 8.023438 3.644531 8.179688 3.796875 8.375 3.796875 L 11.296875 3.796875 C 11.296875 6.191406 11.296875 8.585938 11.296875 10.980469 L 9.652344 10.980469 L 9.652344 5.707031 C 9.652344 5.554688 9.546875 5.421875 9.398438 5.378906 L 6.304688 2.460938 C 6.242188 2.382812 6.140625 2.335938 6.035156 2.335938 Z M 6.386719 3.527344 L 8.488281 5.433594 L 6.386719 5.433594 Z M 0.703125 13.300781 L 0.703125 3.015625 L 5.683594 3.015625 L 5.683594 5.773438 C 5.683594 5.960938 5.84375 6.113281 6.035156 6.113281 L 8.957031 6.113281 C 8.957031 8.511719 8.957031 10.90625 8.957031 13.300781 Z M 2.035156 7.9375 C 2.082031 7.882812 2.148438 7.851562 2.222656 7.851562 L 6.351562 7.851562 C 6.421875 7.851562 6.492188 7.882812 6.539062 7.933594 C 6.585938 7.988281 6.613281 8.058594 6.613281 8.128906 C 6.613281 8.199219 6.585938 8.269531 6.539062 8.320312 C 6.488281 8.375 6.421875 8.40625 6.351562 8.40625 L 2.222656 8.40625 C 2.148438 8.40625 2.082031 8.375 2.035156 8.324219 C 1.933594 8.210938 1.933594 8.046875 2.035156 7.9375 Z M 2.035156 11.226562 C 2.082031 11.171875 2.148438 11.140625 2.222656 11.140625 L 7.5 11.140625 C 7.574219 11.140625 7.640625 11.171875 7.6875 11.226562 C 7.738281 11.277344 7.761719 11.347656 7.761719 11.417969 C 7.765625 11.488281 7.738281 11.558594 7.691406 11.609375 C 7.640625 11.664062 7.574219 11.695312 7.5 11.695312 L 2.222656 11.695312 C 2.152344 11.695312 2.085938 11.664062 2.039062 11.609375 C 1.9375 11.5 1.9375 11.335938 2.039062 11.226562 Z M 7.5 9.496094 C 7.574219 9.496094 7.640625 9.527344 7.6875 9.582031 C 7.789062 9.691406 7.789062 9.855469 7.6875 9.96875 C 7.640625 10.019531 7.574219 10.050781 7.5 10.046875 L 2.222656 10.046875 C 2.152344 10.046875 2.085938 10.019531 2.039062 9.96875 C 1.988281 9.914062 1.960938 9.84375 1.960938 9.773438 C 1.960938 9.703125 1.988281 9.632812 2.039062 9.582031 C 2.085938 9.527344 2.152344 9.496094 2.222656 9.496094 Z M 2.035156 6.289062 C 2.082031 6.238281 2.152344 6.207031 2.222656 6.207031 L 4.664062 6.207031 C 4.734375 6.207031 4.804688 6.238281 4.851562 6.289062 C 4.953125 6.402344 4.953125 6.566406 4.851562 6.675781 C 4.804688 6.730469 4.738281 6.757812 4.664062 6.761719 L 2.222656 6.761719 C 2.148438 6.761719 2.082031 6.730469 2.035156 6.679688 C 1.933594 6.566406 1.933594 6.402344 2.035156 6.289062 Z M 2.035156 4.648438 C 2.082031 4.59375 2.152344 4.5625 2.222656 4.5625 L 3.566406 4.5625 C 3.636719 4.5625 3.707031 4.59375 3.753906 4.644531 C 3.851562 4.757812 3.851562 4.921875 3.753906 5.03125 C 3.707031 5.085938 3.640625 5.113281 3.566406 5.117188 L 2.222656 5.117188 C 2.152344 5.117188 2.085938 5.085938 2.039062 5.035156 C 1.988281 4.980469 1.960938 4.910156 1.960938 4.839844 C 1.960938 4.769531 1.988281 4.699219 2.039062 4.648438 Z M 8.726562 1.210938 L 10.832031 3.117188 L 8.726562 3.117188 Z M 8.726562 1.210938 "/>
+		</g>
+		</svg>
+	</div>
+	<script src="../js/jquery-3.6.4.js"></script>
+	<script src="../js/scriptSearch.js"></script>
+</body>
+</html>

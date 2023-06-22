@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<!-- saved from url=(0014)about:internet -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<link rel="icon" type="image/png" href="../images/ícone_fundo preto.png"/>
+	<link rel="stylesheet" href="../css/sendWorkflowStyle.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css">
+    <title>List GitLab Projects</title>
+</head>
+<body>
+  <div class="pageComplete">
+    <div class="menuSidebar">
+			<div class="left-container">
+				<nav>
+					<ul class="mcd-menu">
+						<li class="main-li-menu"><a href="EncontrarProjeto.html"><strong>Project Selection</strong></a></li>
+						<li class="li-menu"><a href="EnviarWorkflow.html"><strong>Upload version</strong></a></li>
+						<li class="main-li-menu"><a href="PesquisarWorkflow.html"><strong>Download version</strong></a></li>
+						<li id="logout" class="main-li-menu"><a href="../index.html"><strong>Logout</strong></a></li>
+					</ul>
+				</nav>
+			</div>
+		</div>
+    <div class="container">
+      <div class="one">
+        <h1 class="one-title">UPLOAD FILE</h1>
+      </div>
+      <div class="totalSize">
+        <label>Total size (MB):</label>
+        <span id="spanTotalSize" style="font-weight: 700; color: green;">0.00</span>
+        <label>Máx: 5 MB</label>
+      </div>
+      <div id="content">
+        <div class="three">
+          <h1 id="fileDescription">Files</h1>
+        </div>
+        <div class="contentFiles">
+          <div class="file-area">
+            <input type="file" id="fileInput" multiple style="display: none;">
+            <div id="fileUpload" class="file-upload">
+              <button id="addFileButton" type="button">Adicionar novo arquivo</button>
+            </div>
+            <div id="fileList" class="file-list-container"></div>
+            <label for="fileSelect" hidden>Selecionar arquivo principal:</label>
+            <span id="selectedFileName" hidden></span>
+            <select id="fileSelect" hidden>
+              <option>Selecione um arquivo</option>
+            </select>
+          </div>
+          <div id="inicial">Nenhum arquivo selecionado</div>
+          <div id="infoArea" class="info-area">
+            <div class="one">
+              <h1 id="infoWorkflow"></h1>
+            </div>
+            <div class="containerDescription">
+              <div class="three">
+                <h1 id="fileDescription">Descrição</h1>
+              </div>
+              <div class="textarea-container">
+                <textarea id="description" maxlength="5000" onkeypress="checkInput(event)" rows="5" cols="50" placeholder="Descrição do arquivo"></textarea>
+              </div>
+            </div>
+            <div class="containerDescription">
+              <div class="three">
+                <h1 id="fileDescription">Argumentos</h1>
+              </div>
+              <table id="argumentsTable">
+                <thead>
+                  <tr>
+                    <th style="width: 150px;">Nome</th>
+                    <th style="width: 150px;">Direção</th>
+                    <th style="width: 150px;">Tipo</th>
+                    <th>Descrição</th>
+                  </tr>
+                </thead>
+                <tbody id="argumentsTableBody">
+                </tbody>
+              </table>
+            </div>
+            <div style="display: flex; justify-content: space-around; margin-top: 3em;">
+              <button id="remove">Remove File</button>
+              <button class="selectSaveFile selectSaveFileHover" id="save">Save Change</button>
+            </div>
+            <div style="text-align: center; margin-top: 20px;">
+              <button id="advance" style="width: 200px; text-align: center;">Go to Upload Page</button>
+            </div>
+          </div>
+        </div>
+      </div> 
+      <div class="image">
+        <div class="three">
+          <h1 id="fileDescription">Images</h1>
+        </div>
+        <div id="selectImage">  
+          <button id="uploadImage">Upload Images</button>
+          <div id="noImage">Inclua imagens para ajudar na descrição do workflow.</div>
+        </div>
+        <div class="viewImage"></div>
+        <div style="display: flex; justify-content: center;">
+          <button class="selectSaveImage selectSaveImageHover" id="saveImages" style="display: none; width: 200px; height: 2em;">Save images</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <script src="../js/jquery-3.6.4.js"></script>
+  <script src="../js/sendScript.js"></script>
+  <script src="../js/FileSaver.js"></script>
+  <script src="../js/jszip.js"></script>
+</body>
+</html>
